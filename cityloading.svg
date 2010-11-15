@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="TheMetaCityLoading">
+	<defs>
+		<path id="cityScape" d="M 100 10 L 87.5 21 L 89.84375 35.8125 L 79.90625 38.1875 L 84.5625 52.4375 L 70.625 59.5625 L 52.96875 35.28125 L 35.28125 52.96875 L 59.5625 70.625 L 52.4375 84.5625 L 38.1875 79.90625 L 25.9375 88.28125 L 35 100 L 50 100 L 52.4375 115.4375 L 38.1875 120.09375 L 42.09375 129.5 L 28.71875 136.3125 L 35.28125 147.03125 L 47.40625 138.21875 L 54.03125 145.96875 L 64.65625 135.34375 L 77.3125 144.5625 L 63.6875 171.28125 L 100 180 L 100 150 L 107.8125 149.375 L 112.5 179 L 124.71875 176.09375 L 120.09375 161.8125 L 129.5 157.90625 L 136.3125 171.28125 L 147.03125 164.71875 L 129.375 140.4375 L 140.4375 129.375 L 164.71875 147.03125 L 176.09375 124.71875 L 147.5625 115.4375 L 150 100 L 165 100 L 164.1875 89.84375 L 172.9375 82.5 L 161.8125 79.90625 L 147.5625 84.5625 L 140.4375 70.625 L 152.59375 61.78125 L 145.96875 54.03125 L 156.5625 43.4375 L 147.03125 35.28125 L 129.375 59.5625 L 115.4375 52.4375 L 120.09375 38.1875 L 110.15625 35.8125 L 112.5 21 L 100 10 z M 84.5625 147.5625 L 92.1875 149.375 L 89.84375 164.1875 L 79.90625 161.8125 L 84.5625 147.5625 z" />
+		
+		<clipPath id="cityScapeClip">
+			<use xlink:href="#cityScape"/>
+		</clipPath>	
+	</defs>
+	<g transform="scale(0.4)" >
+		<use id="city" fill="none" stroke="#E2E2E2" stroke-width="2" xlink:href="#cityScape"/>
+		<circle id="loadCircle" cx="100" cy="100" r="0" fill="#E2E2E2"  clip-path="url(#cityScapeClip)">
+			<animate attributeName="r" attributeType="XML" begin="0s" dur="5s" from="0" to="100" repeatCount="indefinite" /> 
+		</circle>
+		<animateTransform
+  			attributeType="XML"
+			attributeName="transform"
+			type="rotate"
+			from="0 100 100" to="360 100 100"
+			begin="0s" dur="9"
+  			repeatCount="indefinite"
+			additive="sum"/>
+	</g>
+</svg>
