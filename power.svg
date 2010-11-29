@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+	<g transform="scale(1)">
+		<path d="m 250,80 a 150,150 1 1 1 -100,0" style="stroke-width:15;stroke:grey;fill:none; stroke-linecap: round;"/>
+		<line x1="202.5" y1="20" x2="202.5" y2="270" style="stroke-width:15;stroke:grey;fill:none; stroke-linecap: round;"/>
+	</g>
+</svg>
