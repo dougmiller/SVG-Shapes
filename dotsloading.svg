@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="15" width="92">
 	<defs>
 		<rect id="loadsquare" width="10" height="10" fill="none" stroke="#E2E2E2" stroke-width="1px" />
 	</defs>
 
-	<use id="square1" x="0" y="0" xlink:href="#loadsquare">
+	<use id="square1" x="1" y="1" xlink:href="#loadsquare">
 		<set id="square1effect" attributeName="opacity" attributeType="CSS" to="0" begin="0.5s;square5effect.end" dur="0.5s"/>
 	</use>
 
-	<use id="square2" x="20" y="0" xlink:href="#loadsquare">
+	<use id="square2" x="21" y="1" xlink:href="#loadsquare">
 		<set id="square2effect" attributeName="opacity" attributeType="CSS" to="0" begin="square1effect.end" dur="0.5s"/>
 	</use>
 
-	<use id="square3" x="40" y="0" xlink:href="#loadsquare">
+	<use id="square3" x="41" y="1" xlink:href="#loadsquare">
 		<set id="square3effect" attributeName="opacity" attributeType="CSS" to="0" begin="square2effect.end" dur="0.5s"/>
 	</use>
 
-	<use id="square4" x="60" y="0" xlink:href="#loadsquare">
+	<use id="square4" x="61" y="1" xlink:href="#loadsquare">
 		<set id="square4effect" attributeName="opacity" attributeType="CSS" to="0" begin="square3effect.end" dur="0.5s"/>
 	</use>
 
-	<use id="square5" x="80" y="0" xlink:href="#loadsquare">
+	<use id="square5" x="81" y="1" xlink:href="#loadsquare">
 		<set id="square5effect" attributeName="opacity" attributeType="CSS" to="0" begin="square4effect.end" dur="0.5s"/>
 	</use>
 </svg>
