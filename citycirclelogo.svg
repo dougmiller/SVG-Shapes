@@ -20,7 +20,7 @@
 
 	<g transform="scale(3)" fill-rule="evenodd">
 		<g clip-path="url(#innerCity)">
-			<use id="tengear" fill="none" stroke="#E2E2E2" stroke-width="3" transform="scale(0.40) translate(72, 180)" style="filter:url(#distanceBlurFar)" xlink:href="#tengearuse">
+			<use id="largegear" fill="none" stroke="#E2E2E2" stroke-width="3" transform="scale(0.40) translate(72, 180)" style="filter:url(#distanceBlurFar)" xlink:href="#tengearuse">
 		    	<animateTransform
         			attributeType="XML"
         			attributeName="transform"
@@ -29,6 +29,9 @@
         			begin="0s" dur="31"
         			repeatCount="indefinite"
 					additive="sum"/>
+
+					<animate id="largegearblue" attributeName="stroke" from="#E2E2E2" to="blue" begin="0; largegeargray.end+5s" dur="3s" repeatCount="1"/>
+					<animate id="largegeargray" attributeName="stroke" from="blue" to="#E2E2E2" begin="largegearblue.end" dur="3s" repeatCount="1"/>
 			</use>
 
 			<use id="smallgear" fill="none" stroke="#E2E2E2" stroke-width="2.5" transform="scale(0.25) translate(390, 360)" style="filter:url(#distanceBlurClose)" xlink:href="#tengearuse">
@@ -40,6 +43,9 @@
         			begin="0s" dur="9"
         			repeatCount="indefinite"
 					additive="sum"/>
+
+					<animate id="smallgearorange" attributeName="stroke" from="#E2E2E2" to="orange" begin="2s; smallgeargray.end+7s" dur="4s" repeatCount="1"/>
+					<animate id="smallgeargray" attributeName="stroke" from="orange" to="#E2E2E2" begin="smallgearorange.end" dur="4s" repeatCount="1"/>
 			</use>
 		</g>
 
