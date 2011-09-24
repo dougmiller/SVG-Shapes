@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="tmccirclerotate"  width="600px" height="250px">
+
+	<circle cx="100" cy="150" r="90" stroke="darkslategray" stroke-width="1.5" stroke-dasharray="5 10" fill="none" stroke-linecap="round">
+			<animateTransform
+  			attributeType="XML"
+			attributeName="transform"
+			type="rotate"
+			from="0 100 150" to="360 100 150"
+			begin="0s" dur="20"
+  			repeatCount="indefinite"
+			additive="sum"/>
+	</circle>
+
+	<line x1="176" x2="176" y1="100" y2="100" stroke="darkslategray" stroke-width="1.5" stroke-dasharray="5 10" stroke-linecap="round" opacity="0">
+		<set id="makeIntialLineVisible" attributeName="opacity" to="1" begin="xup.begin" fill="freeze" /> 
+		<animate id="xup" attributeName="x2" to="270" dur="2s" begin="0" fill="freeze" /> 
+		<animate id="yup" attributeName="y2" to="40" dur="2s" begin="0" fill="freeze" /> 
+	</line>
+
+	<line x1="270" x2="270" y1="40" y2="40" stroke="darkslategray" stroke-width="1.5" stroke-dasharray="5 10" stroke-linecap="round" opacity="0">
+		<set id="makeTopLineVisible" attributeName="opacity" to="1" begin="xup.end" fill="freeze" /> 
+		<animate id="xacross" attributeName="x2" to="590" dur="2s" begin="xup.end" fill="freeze" /> 
+	</line>
+
+</svg>
