@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="tmc-lilypad" width="400px" height="400px">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="tmc-lilypad" width="50mm" height="50mm" viewBox="0 0 50 50">
 	
 	<defs>
+
+		<clipPath id="hole">
+			<circle cx="2.5" cy="2.5" r="1" fill="white"/>
+		</clipPath>
+
 		<g id="connectionNode">
-			<polygon stroke="none" fill="gold" points="10,0  40,2.5 40,17.5 10,20" />
-			<circle cx="10px" cy="10px" r="10px" stroke="none" fill="gold" />
-			<circle cx="40px" cy="10px" r="7.5px" stroke="none" fill="purple" />
+			<polyline stroke="none" fill="gold" points="2.5,0 9,1 9,4 2.5,5" />
+			<circle cx="2.5" cy="2.5" r="2.5" stroke="none" fill="gold" clip-path="url(#hole)"/>
+			<circle cx="9" cy="2.5" r="2.5" stroke="none" fill="purple" />
 		</g>
+
 	</defs>
 
-	<circle cx="200px" cy="200px" r="195px" stroke="none" fill="brown" />
-	<circle cx="200px" cy="200px" r="145px" stroke="none" fill="purple" />
+	<circle id="rawpcb" cx="25" cy="25" r="25" stroke="none" fill="brown" />
+	<circle id="purplering" cx="25" cy="25" r="16.5" stroke="none" fill="purple" />
 
-    <use x="100" y="100" xlink:href="#connectionNode"/>
+    <use x="0" y="22.5" xlink:href="#connectionNode"/>
 
 </svg>
