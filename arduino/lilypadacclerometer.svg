@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id=""  width="" height="">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="tmc-lilypad-accelerometer" width="50mm" height="50mm" viewBox="0 0 50 50">
 	
 	<defs>
+
+		<clipPath id="hole">
+			<circle cx="2.5" cy="2.5" r="1" fill="white"/>
+		</clipPath>
+
+		<g id="connectionNode" clip-path="url(#hole)">
+			<polyline stroke="none" fill="gold" points="M2.5,0 S9,1 9,4 2.5,5" />
+			<circle cx="2.5" cy="2.5" r="2.5" stroke="none" fill="gold"/>
+			<circle cx="9" cy="2.5" r="2.5" stroke="none" fill="purple" />
+		</g>
+
 	</defs>
+
+	<circle id="rawpcb" cx="25" cy="25" r="25" stroke="none" fill="brown" />
+	<circle id="purplering" cx="25" cy="25" r="16.5" stroke="none" fill="purple" />
+
+    <use x="0" y="22.5" xlink:href="#connectionNode" transform="rotate(6 22.5 22.5)"/>
 
 </svg>
