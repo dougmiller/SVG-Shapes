@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+html {
+    background: #000000;
+    color: #BCBCBC;
+}
+
+body {
+    margin: 100px auto auto;
+    width: 600px;
+}
