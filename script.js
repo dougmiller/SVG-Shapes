@@ -1,42 +1,60 @@
-function getTree(hash) {
-    var pathToTree, returnedJSON;
-    pathToTree = 'https://api.github.com/repos/dougmiller/SVG-Shapes/git/trees/' + hash;
+function makeAJAXCall(hash, cb) {
+    var returnedJSON, cb = cb, hash = hash;
     $.ajax({
         accepts: 'application/vnd.github-blob.raw',
         dataType: 'jsonp',
-        url: pathToTree,
+        url: hash,
         success: function (json) {
-            console.debug(json);
+            console.info(json);
             returnedJSON = json;
-            console.debug(returnedJSON);
+			
+			// Time for callback to be executed
+            if (cb) {
+				cb(json);
+			}
         },
         error: function (error) {
-            console.debug(error);
+            console.error(error);
+            // an error happened, check it out.
+            throw error;
         }
     });
     return returnedJSON;
 }
 
-function parseTree(hash) {
+function parseBlob(hash) {
     var objectedJSON, objectList = [], i;
-    objectedJSON = getTree(hash, function () {
-        console.debug(objectedJSON);
-        for (i = 0;  i < objectedJSON.data.tree.length; i += 1) {
-            if (i.type === 'blob') {
-                if (i.type.slice(-4) === '.svg') {     // we only want the svg images not the ignore file and README etc
-                    objectList.append(i.content);
-                }
-            } else if (i.type === 'tree') {
-                    objectList.append(parseTree(getTree(i.sha)));
-            }
-        }
-
+    objectedJSON = makeAJAXCall(hash, function (objectedJSON) {  // no loop as only one entry
+        objectList.push(objectedJSON.content);
     });
     return objectList;
 }
 
+function walkTree(hash) {
+    var objectedJSON, objectList = [], i, entry;
+    var hash = 'https://api.github.com/repos/DougMiller/SVG-Shapes/git/trees/' + hash;
+    objectedJSON = makeAJAXCall(hash, function (objectedJSON) {
+        for (i = 0;  i < objectedJSON.data.tree.length; i += 1) {
+            entry = objectedJSON.data.tree[i];
+            console.debug(entry);
+            if (entry.type === 'blob') {
+                if (entry.path.slice(-4) === '.svg') {     // we only want the svg images not the ignore file and README etc
+                    console.info(entry.path)
+                    objectList.push(parseBlob(entry.url));
+                }
+            } else if (entry.type === 'tree') {
+                objectList.push(walkTree(entry.sha));
+            }
+        }
+    
+    });
+    console.info(objectList);
+    return objectList;
+}
+
 $(document).ready(function () {
-    var objects = parseTree('master', function () {
-        console.debug(objects);
+    var objects = walkTree('master', function () {     // master to start at the top and work our way down
+        console.info(objects);
     });
 });
+
