@@ -3,7 +3,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="tmc-lilypad-accelerometer" width="50mm" height="50mm" viewBox="0 0 50 50">
 	
 	<defs>
-
 		<clipPath id="hole">
 			<circle cx="2.5" cy="2.5" r="1" fill="white"/>
 		</clipPath>

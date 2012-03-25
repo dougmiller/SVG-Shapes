@@ -6,15 +6,15 @@
 		<linearGradient id="cityscreen">
 			<!-- No offsets because the animation puts them in for us -->
 			<stop id="offa" stop-color="#E2E2E2" stop-opacity="0">
-				<animate id="citywipeleft" attributeName="offset" begin="0s" dur="3" values="0;0.8" repeatCount="indefinite" />
+				<animate id="citywipeleft" attributeName="offset" begin="0" dur="3" values="0;0.8" repeatCount="indefinite" />
 			</stop>
 
 			<stop id="offb" stop-color="#E2E2E2" stop-opacity="1">
-				<animate id="citywipecentre" attributeName="offset" begin="0s" dur="3" values="0.1;0.9" repeatCount="indefinite" />
+				<animate id="citywipecentre" attributeName="offset" begin="0" dur="3" values="0.1;0.9" repeatCount="indefinite" />
 			</stop>		
 
 			<stop id="offc" stop-color="#E2E2E2" stop-opacity="0">
-				<animate id="citywiperight" attributeName="offset" begin="0s" dur="3" values="0.2;1" repeatCount="indefinite" />
+				<animate id="citywiperight" attributeName="offset" begin="0" dur="3" values="0.2;1" repeatCount="indefinite" />
 			</stop>
 		</linearGradient> 
 	</defs>

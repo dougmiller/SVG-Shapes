@@ -27,7 +27,7 @@
 			attributeName="transform"
 			type="translate"
 			from="0" to="-400"
-			begin="0s" dur="6s"
+			begin="0" dur="6s"
 			repeatCount="indefinite"
 			additive="sum"/>
 	</rect>

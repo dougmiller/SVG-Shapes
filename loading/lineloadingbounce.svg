@@ -7,7 +7,7 @@
 			<stop id="offa" stop-color="#E2E2E2" stop-opacity="0" offset="0"/>
 
 			<stop id="offb" stop-color="#E2E2E2" stop-opacity="1"> <!-- No offset because the animation puts it in for us -->
-				<animate id="citywipeone" attributeName="offset" begin="0s; citywipetwo.end" dur="1" values="0;1" repeatCount="1" />
+				<animate id="citywipeone" attributeName="offset" begin="0; citywipetwo.end" dur="1" values="0;1" repeatCount="1" />
 				<animate id="citywipetwo" attributeName="offset" begin="citywipeone.end" dur="1" values="1;0" repeatCount="1" />
 			</stop>		
 

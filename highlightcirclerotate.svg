@@ -8,7 +8,7 @@
 			attributeName="transform"
 			type="rotate"
 			from="0 100 150" to="360 100 150"
-			begin="0s" dur="20"
+			begin="0" dur="20"
   			repeatCount="indefinite"
 			additive="sum"/>
 	</circle>

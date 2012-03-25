@@ -7,7 +7,7 @@
 				id="animateslug0"
 				attributeName="opacity"
 				to="0"
-				begin="animateslug7.end; 0s" dur="0.5s"
+				begin="animateslug7.end; 0" dur="0.5s"
 	  			repeatCount="1"/>
 		</path>
 		<path id="slug1" fill="none" stroke="#E2E2E2" stroke-width="2" d="M135.355,135.355 L119.134,146.194 L130.615,173.910 L156.569,156.569 z">
@@ -65,7 +65,6 @@
 				to="0"
 				begin="animateslug6.end" dur="0.5s"
 	  			repeatCount="1"/>
-			<set id="animateslug7special" attributeName="visibility" attributeType="CSS" to="visible" begin="0s" dur="0s"/>
 		</path>
 	</g>
 </svg>

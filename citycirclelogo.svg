@@ -26,7 +26,7 @@
         			attributeName="transform"
         			type="rotate"
         			from="0,100,100" to="-360,100,100"
-        			begin="0s" dur="31s"
+        			begin="0" dur="31s"
         			repeatCount="indefinite"
 					additive="sum"/>
 
@@ -40,7 +40,7 @@
         			attributeName="transform"
         			type="rotate"
         			from="0 100 100" to="360 100 100"
-        			begin="0s" dur="9s"
+        			begin="0" dur="9s"
         			repeatCount="indefinite"
 					additive="sum"/>
 
@@ -55,7 +55,7 @@
         		attributeName="transform"
         		type="rotate"
         		from="0,100,100" to="360,100,100"
-        		begin="0s" dur="10min"
+        		begin="0" dur="10min"
         		repeatCount="indefinite"/>
 		</path>
 	</g>
