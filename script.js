@@ -1,12 +1,13 @@
 (function () {
     'use strict';
 
-    var objectsList = [];
-    var isParsing = 0;
+    var objectsList = [], isParsing = 0, insertArea = $('insertArea');
+    var svger = '<?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="400" height="400"><style type="text/css">#powerGlyph:hover {filter: url(#distanceBlurClose);}</style><defs><path id="roundOff" d="M250,80 a150,150 1 1 1 -100,0"/><line id="straightOn" x1="202.5" y1="20" x2="202.5" y2="270"/><filter id="distanceBlurClose"><feGaussianBlur in="SourceGraphic" stdDeviation="1"/></filter></defs><g id="powerGlyph"><use xlink:href="#roundOff" stroke-width="15" stroke="gray" style="fill:none; stroke-linecap: round; filter:url(#distanceBlurClose);"/><use xlink:href="#straightOn" stroke-width="15" stroke="gray" style="fill:none; stroke-linecap: round; filter:url(#distanceBlurClose);"/></g></svg>';
+
 
     function makeAJAXCall(hash, cb) {
         $.ajaxSetup({
-            accept: 'application/vnd.github.raw',
+            Accept: 'Application/vnd.github.raw+json',
             dataType: 'jsonp'
         });
 
@@ -32,54 +33,38 @@
         });
     }
 
-    function complete(loopLength, treeContents, cb) {
+    function addSVGToPage(SVGToAdd) {
+        var entry, decodedEntry, xmlDoc, importedNode;
+        makeAJAXCall(SVGToAdd, function (returnedJSON) {
+            var svgElement;
+            entry = decodeURIComponent(escape(atob(returnedJSON.data.content.replace(/\s/g, ''))));
+            decodedEntry = entry.split('\n').slice(2).join('\n');  //remove the first two elements in the file that prevent them from being added as an actual file.
+            xmlDoc = $.parseXML(decodedEntry); // turn the string into an xml fragment
 
-        if (cb && loopLength === 0) {
-            objectsList.push(treeContents);
-            isParsing -= 1;
-            if (!isParsing){
-                console.info(objectsList);
-            }
-            cb();
-        }
+            importedNode = document.importNode(xmlDoc.documentElement, true);
+            document.body.appendChild(importedNode);
+        });
     }
 
-    function parseTree(hash, treeName, cb) {
-        var treeContents = {'tree': treeName, 'blobs': []}, loopLength, i, entry;
-        var tree = 'https://api.github.com/repos/DougMiller/SVG-Shapes/git/trees/' + hash;
+    function parseTree(hash) {
+        var i, entry, tree = 'https://api.github.com/repos/DougMiller/SVG-Shapes/git/trees/' + hash;
 
         makeAJAXCall(tree, function (returnedJSON) {
-            loopLength = returnedJSON.data.tree.length;
-            isParsing += 1;
             for (i = 0;  i < returnedJSON.data.tree.length; i += 1) {
-
                 entry = returnedJSON.data.tree[i];
 
                 if (entry.type === 'blob') {
                     if (entry.path.slice(-4) === '.svg') {     // we only want the svg images not the ignore file and README etc
-                        parseBlob(entry.url, function (parsedBlob) {
-                            treeContents.blobs.push((entry.path, parsedBlob));
-                            loopLength -= 1;
-                            complete(loopLength, treeContents, cb);
-                        });
-                    } else {
-                        loopLength -= 1;  // extra files we don't care about
+                        addSVGToPage(entry.url);
                     }
                 } else if (entry.type === 'tree') {
-                    parseTree(entry.sha, entry.path, function () {
-
-                    });
-                    loopLength -= 1;
+                    parseTree(entry.sha);
                 }
             }
         });
     }
 
     $(document).ready(function () {
-        parseTree('master', 'master', function () {     // master to start at the top and work our way down
-            if (!isParsing){
-                console.info(objectsList);
-            }
-        });
+        parseTree('master');
     });
 }());
