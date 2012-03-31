@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="200" width="200">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="200" width="200" id="tmcCircleSlugOpacity">
 	<g id="slugGroup">
 		<path id="slug0" fill="none" stroke="#E2E2E2" stroke-width="2" d="M150.000,100.000 L146.194,119.134 L173.910,130.615 L180.000,100.000 z">
 			<animate attributeType="css"
