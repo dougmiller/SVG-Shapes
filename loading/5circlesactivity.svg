@@ -1,49 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="200" width="200" id="tmc5CircleFadeActivity">	
+
 	<defs>
-
 		<circle id="circle" cx="100" cy="100" r="90" stroke="grey" stroke-width="15" fill="none" stroke-dasharray="566,566"/>
-
 	</defs>
 
 	<use id="circle1" xlink:href="#circle"  transform="rotate(-137 100 100)">
 		<animate id="circle1OpacityFadein" attributeName="opacity" from="0" to="1" dur="0.2s" begin="0;circle5OpacityFadeOut.begin+0.2s" fill="freeze" /> 
-		<animate id="circle1StrokeOffsetAnimation" attributeName="stroke-dashoffset" from="0" begin="circle1OpacityFadein.begin" to="566" dur="3s" fill="freeze" /> 
+		<animate id="circle1StrokeOffsetAnimation" attributeName="stroke-dashoffset" from="0" begin="circle1OpacityFadein.begin" to="566" dur="2s" fill="freeze" /> 
 		<animateTransform id="circle1Rotate180" attributeType="XML" attributeName="transform" type="rotate" from="0 100 100" to="180 100 100"
-			dur="3s" begin="circle1OpacityFadein.begin" additive="sum"/>
+			dur="2s" begin="circle1OpacityFadein.begin" additive="sum"/>
 		<animate id="circle1OpacityFadeOut" attributeName="opacity" from="1" to="0" dur="0.5s"  begin="circle1StrokeOffsetAnimation.end-0.5s"  fill="freeze" /> 
 	</use>
 
 	<use id="circle2" xlink:href="#circle"  transform="rotate(9 100 100)" opacity="0">
 		<animate id="circle2OpacityFadein" attributeName="opacity" from="0" to="1" dur="0.5s" begin="circle1OpacityFadeOut.begin+0.2s" fill="freeze" /> 
-		<animate id="circle2StrokeOffsetAnimation" attributeName="stroke-dashoffset" from="0" begin="circle2OpacityFadein.begin" to="566" dur="3s" fill="freeze" /> 
+		<animate id="circle2StrokeOffsetAnimation" attributeName="stroke-dashoffset" from="0" begin="circle2OpacityFadein.begin" to="566" dur="2s" fill="freeze" /> 
 		<animateTransform id="circle2Rotate180" attributeType="XML" attributeName="transform" type="rotate" from="0 100 100" to="180 100 100"
-			dur="3s" begin="circle2OpacityFadein.begin" additive="sum"/>
+			dur="2s" begin="circle2OpacityFadein.begin" additive="sum"/>
 		<animate id="circle2OpacityFadeOut" attributeName="opacity" from="1" to="0" dur="0.5s"  begin="circle2StrokeOffsetAnimation.end-0.5s"  fill="freeze" /> 
 	</use>
 
 	<use id="circle3" xlink:href="#circle"  transform="rotate(228 100 100)" opacity="0">
 		<animate id="circle3OpacityFadein" attributeName="opacity" from="0" to="1" dur="0.5s" begin="circle2OpacityFadeOut.begin+0.2s" fill="freeze" /> 
-		<animate id="circle3StrokeOffsetAnimation" attributeName="stroke-dashoffset" from="0" begin="circle3OpacityFadein.begin" to="566" dur="3s" fill="freeze" /> 
+		<animate id="circle3StrokeOffsetAnimation" attributeName="stroke-dashoffset" from="0" begin="circle3OpacityFadein.begin" to="566" dur="2s" fill="freeze" /> 
 		<animateTransform id="circle3otate180" attributeType="XML" attributeName="transform" type="rotate" from="0 100 100" to="180 100 100"
-			dur="3s" begin="circle3OpacityFadein.begin" additive="sum"/>
+			dur="2s" begin="circle3OpacityFadein.begin" additive="sum"/>
 		<animate id="circle3OpacityFadeOut" attributeName="opacity" from="1" to="0" dur="0.5s"  begin="circle3StrokeOffsetAnimation.end-0.5s"  fill="freeze" /> 
 	</use>
 
 	<use id="circle4" xlink:href="#circle"  transform="rotate(47 100 100)" opacity="0">
 		<animate id="circle4OpacityFadein" attributeName="opacity" from="0" to="1" dur="0.5s" begin="circle3OpacityFadeOut.begin+0.2s" fill="freeze" /> 
-		<animate id="circle4StrokeOffsetAnimation" attributeName="stroke-dashoffset" from="0" begin="circle4OpacityFadein.begin" to="566" dur="3s" fill="freeze" /> 
+		<animate id="circle4StrokeOffsetAnimation" attributeName="stroke-dashoffset" from="0" begin="circle4OpacityFadein.begin" to="566" dur="2s" fill="freeze" /> 
 		<animateTransform id="circle4Rotate180" attributeType="XML" attributeName="transform" type="rotate" from="0 100 100" to="180 100 100"
-			dur="3s" begin="circle4OpacityFadein.begin" additive="sum"/>
+			dur="2s" begin="circle4OpacityFadein.begin" additive="sum"/>
 		<animate id="circle4OpacityFadeOut" attributeName="opacity" from="1" to="0" dur="0.5s"  begin="circle4StrokeOffsetAnimation.end-0.5s"  fill="freeze" /> 
 	</use>
 
 	<use id="circle2" xlink:href="#circle"  transform="rotate(300 100 100)" opacity="0">
 		<animate id="circle5OpacityFadein" attributeName="opacity" from="0" to="1" dur="0.5s" begin="circle4OpacityFadeOut.begin+0.2s" fill="freeze" /> 
-		<animate id="circle5StrokeOffsetAnimation" attributeName="stroke-dashoffset" from="0" begin="circle5OpacityFadein.begin" to="566" dur="3s" fill="freeze" /> 
+		<animate id="circle5StrokeOffsetAnimation" attributeName="stroke-dashoffset" from="0" begin="circle5OpacityFadein.begin" to="566" dur="2s" fill="freeze" /> 
 		<animateTransform id="circle5Rotate180" attributeType="XML" attributeName="transform" type="rotate" from="0 100 100" to="180 100 100"
-			dur="3s" begin="circle5OpacityFadein.begin" additive="sum"/>
+			dur="2s" begin="circle5OpacityFadein.begin" additive="sum"/>
 		<animate id="circle5OpacityFadeOut" attributeName="opacity" from="1" to="0" dur="0.5s"  begin="circle5StrokeOffsetAnimation.end-0.5s"  fill="freeze" /> 
 	</use>
 </svg>
