@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="600" width="600">
+	<defs>
+		<path id="innercut" d="M 100 67.5 L 105.09375 67.90625 L 110.03125 69.09375 L 114.75 71.03125 L 119.09375 73.71875 L 122.96875 77.03125 L 126.28125 80.90625 L 128.96875 85.25 L 130.90625 89.96875 L 132.09375 94.90625 L 132.5 100 L 132.09375 105.09375 L 130.90625 110.03125 L 128.96875 114.75 L 126.28125 119.09375 L 122.96875 122.96875 L 119.09375 126.28125 L 114.75 128.96875 L 110.03125 130.90625 L 105.09375 132.09375 L 100 132.5 L 94.90625 132.09375 L 89.96875 130.90625 L 85.25 128.96875 L 80.90625 126.28125 L 77.03125 122.96875 L 73.71875 119.09375 L 71.03125 114.75 L 69.09375 110.03125 L 67.90625 105.09375 L 67.5 100 L 67.90625 94.90625 L 69.09375 89.96875 L 71.03125 85.25 L 73.71875 80.90625 L 77.03125 77.03125 L 80.90625 73.71875 L 85.25 71.03125 L 89.96875 69.09375 L 94.90625 67.90625 L 100 67.5 z" />
+		<clipPath id="innerCity">
+			<use xlink:href="#innercut"/>
+		</clipPath>
+	
+		<path id="tengearuse" d="M149.606,106.267 L148.429,112.434 L158.115,114.921 L165.084,125.769 L161.341,133.723 L148.541,135.267 L140.451,129.389 L136.448,134.227 L131.871,138.526 L138.245,146.231 L137.508,159.103 L129.805,163.338 L118.541,157.063 L115.451,147.553 L109.369,149.114 L103.140,149.901 L103.767,159.882 L95.605,169.862 L86.883,168.760 L81.459,157.063 L84.549,147.553 L78.711,145.241 L73.209,142.216 L67.850,150.660 L55.380,153.936 L48.972,147.918 L51.459,135.267 L59.549,129.389 L56.185,124.088 L53.511,118.406 L44.213,122.087 L32.199,117.408 L30.552,108.773 L40.000,100.000 L50.000,100.000 L50.394,93.733 L51.571,87.566 L41.885,85.079 L34.916,74.231 L38.659,66.277 L51.459,64.733 L59.549,70.611 L63.552,65.773 L68.129,61.474 L61.755,53.769 L62.492,40.897 L70.195,36.662 L81.459,42.937 L84.549,52.447 L90.631,50.886 L96.860,50.099 L96.233,40.118 L104.395,30.138 L113.117,31.240 L118.541,42.937 L115.451,52.447 L121.289,54.759 L126.791,57.784 L132.150,49.340 L144.620,46.064 L151.028,52.082 L148.541,64.733 L140.451,70.611 L143.815,75.912 L146.489,81.594 L155.787,77.913 L167.801,82.592 L169.448,91.227 L160.000,100.000 L150.000,100.000 z M132.500,100.000 L132.244,104.073 L131.479,108.082 L130.218,111.964 L128.480,115.657 L126.293,119.103 L123.691,122.248 L120.716,125.042 L117.414,127.441 L113.838,129.407 L110.043,130.909 L106.090,131.924 L102.041,132.436 L97.959,132.436 L93.910,131.924 L89.957,130.909 L86.162,129.407 L82.586,127.441 L79.284,125.042 L76.309,122.248 L73.707,119.103 L71.520,115.657 L69.782,111.964 L68.521,108.082 L67.756,104.073 L67.500,100.000 L67.756,95.927 L68.521,91.918 L69.782,88.036 L71.520,84.343 L73.707,80.897 L76.309,77.752 L79.284,74.958 L82.586,72.559 L86.162,70.593 L89.957,69.091 L93.910,68.076 L97.959,67.564 L102.041,67.564 L106.090,68.076 L110.043,69.091 L113.838,70.593 L117.414,72.559 L120.716,74.958 L123.691,77.752 L126.293,80.897 L128.480,84.343 L130.218,88.036 L131.479,91.918 L132.244,95.927 z" /> 
+
+		<filter id="distanceBlurFar">
+			<feGaussianBlur in="SourceGraphic" stdDeviation="1.5" />
+		</filter>
+
+		<filter id="distanceBlurClose">
+			<feGaussianBlur in="SourceGraphic" stdDeviation="0.9" />
+		</filter>
+	</defs>
+
+    <g transform="scale(3)" fill-rule="evenodd">
+        <g clip-path="url(#innerCity)">
+            <use id="largegear" fill="none" stroke="#E2E2E2" stroke-width="3" transform="scale(0.40) translate(72, 180)" style="filter:url(#distanceBlurFar)" xlink:href="#tengearuse">
+                <animateTransform
+                    attributeType="XML"
+                    attributeName="transform"
+                    type="rotate"
+                    from="0,100,100" to="-360,100,100"
+                    begin="0s" dur="31"
+                    repeatCount="indefinite"
+                    additive="sum"/>
+
+                <animate id="largegearblue" attributeName="stroke" from="#E2E2E2" to="blue" begin="0; largegeargray.end+5s" dur="3s" repeatCount="1"/>
+                <animate id="largegeargray" attributeName="stroke" from="blue" to="#E2E2E2" begin="largegearblue.end" dur="3s" repeatCount="1"/>
+ 
+                <set id="bigGearDisp1" attributeName="display" to="none" begin="1s; bigGearDisp7.end + 1s" dur="0.9s"/>
+                <set id="bigGearDisp2" attributeName="display" to="none" begin="bigGearDisp1.end + 0.6s" dur="0.2s"/>
+                <set id="bigGearDisp3" attributeName="display" to="none" begin="bigGearDisp2.end + 1.9s" dur="0.1s"/>
+                <set id="bigGearDisp4" attributeName="display" to="none" begin="bigGearDisp3.end + 1.1s" dur="0.5s"/>
+                <set id="bigGearDisp5" attributeName="display" to="none" begin="bigGearDisp4.end + 1.9s" dur="0.4s"/>
+                <set id="bigGearDisp6" attributeName="display" to="none" begin="bigGearDisp5.end + 0.8s" dur="1.0s"/>
+                <set id="bigGearDisp7" attributeName="display" to="none" begin="bigGearDisp6.end + 0.7s" dur="0.3s"/>
+            </use>
+
+            <use id="smallgear" fill="none" stroke="#E2E2E2" stroke-width="2.5" transform="scale(0.25) translate(390, 360)" style="filter:url(#distanceBlurClose)" xlink:href="#tengearuse">
+                <animate id="smallgearorange" attributeName="stroke" from="#E2E2E2" to="orange" begin="2s; smallgeargray.end+7s" dur="4s" repeatCount="1"/>
+                <animate id="smallgeargray" attributeName="stroke" from="orange" to="#E2E2E2" begin="smallgearorange.end" dur="4s" repeatCount="1"/>
+
+		    	<animateTransform
+		    	    id="smallgearBroken1"
+        			attributeType="XML"
+        			attributeName="transform"
+        			type="rotate"
+        			from="0,100,100" to="60,100,100"
+        			begin="0;smallgearBroken9.end" dur="2s"
+					additive="sum"/>
+		    	<animateTransform
+		    	    id="smallgearBroken2"
+        			attributeType="XML"
+        			attributeName="transform"
+        			type="rotate"
+        			from="60,100,100" to="10,100,100"
+        			begin="smallgearBroken1.end" dur="1s"
+					additive="sum"/>
+		    	<animateTransform
+		    	    id="smallgearBroken3"
+        			attributeType="XML"
+        			attributeName="transform"
+        			type="rotate"
+        			from="10,100,100" to="200,100,100"
+        			begin="smallgearBroken2.end" dur="0.8s"
+					additive="sum"/>
+		    	<animateTransform
+		    	    id="smallgearBroken4"
+        			attributeType="XML"
+        			attributeName="transform"
+        			type="rotate"
+        			from="200,100,100" to="120,100,100"
+        			begin="smallgearBroken3.end" dur="1.1s"
+					additive="sum"/>
+		    	<animateTransform
+		    	    id="smallgearBroken5"
+        			attributeType="XML"
+        			attributeName="transform"
+        			type="rotate"
+        			from="120,100,100" to="300,100,100"
+        			begin="smallgearBroken4.end" dur="1s"
+					additive="sum"/>
+		    	<animateTransform
+		    	    id="smallgearBroken6"
+        			attributeType="XML"
+        			attributeName="transform"
+        			type="rotate"
+        			from="300,100,100" to="340,100,100"
+        			begin="smallgearBroken5.end" dur="0.8s"
+					additive="sum"/>
+		    	<animateTransform
+		    	    id="smallgearBroken7"
+        			attributeType="XML"
+        			attributeName="transform"
+        			type="rotate"
+        			from="340,100,100" to="270,100,100"
+        			begin="smallgearBroken6.end" dur="0.7s"
+					additive="sum"/>
+		    	<animateTransform
+		    	    id="smallgearBroken8"
+        			attributeType="XML"
+        			attributeName="transform"
+        			type="rotate"
+        			from="270,100,100" to="100,100,100"
+        			begin="smallgearBroken7.end" dur="1s"
+					additive="sum"/>
+		    	<animateTransform
+		    	    id="smallgearBroken9"
+        			attributeType="XML"
+        			attributeName="transform"
+        			type="rotate"
+        			from="100,100,100" to="0,100,100"
+        			begin="smallgearBroken8.end" dur="0.6s"
+					additive="sum"/>
+            </use>
+        </g>
+
+        <path id="cityscape" fill="none" stroke="#E2E2E2" stroke-width="2" d="M 100 10 L 87.5 21 L 89.84375 35.8125 L 79.90625 38.1875 L 84.5625 52.4375 L 70.625 59.5625 L 52.96875 35.28125 L 35.28125 52.96875 L 59.5625 70.625 L 52.4375 84.5625 L 38.1875 79.90625 L 25.9375 88.28125 L 35 100 L 50 100 L 52.4375 115.4375 L 38.1875 120.09375 L 42.09375 129.5 L 28.71875 136.3125 L 35.28125 147.03125 L 47.40625 138.21875 L 54.03125 145.96875 L 64.65625 135.34375 L 77.3125 144.5625 L 63.6875 171.28125 L 100 180 L 100 150 L 107.8125 149.375 L 112.5 179 L 124.71875 176.09375 L 120.09375 161.8125 L 129.5 157.90625 L 136.3125 171.28125 L 147.03125 164.71875 L 129.375 140.4375 L 140.4375 129.375 L 164.71875 147.03125 L 176.09375 124.71875 L 147.5625 115.4375 L 150 100 L 165 100 L 164.1875 89.84375 L 172.9375 82.5 L 161.8125 79.90625 L 147.5625 84.5625 L 140.4375 70.625 L 152.59375 61.78125 L 145.96875 54.03125 L 156.5625 43.4375 L 147.03125 35.28125 L 129.375 59.5625 L 115.4375 52.4375 L 120.09375 38.1875 L 110.15625 35.8125 L 112.5 21 L 100 10 z M 100 67.5 L 105.09375 67.90625 L 110.03125 69.09375 L 114.75 71.03125 L 119.09375 73.71875 L 122.96875 77.03125 L 126.28125 80.90625 L 128.96875 85.25 L 130.90625 89.96875 L 132.09375 94.90625 L 132.5 100 L 132.09375 105.09375 L 130.90625 110.03125 L 128.96875 114.75 L 126.28125 119.09375 L 122.96875 122.96875 L 119.09375 126.28125 L 114.75 128.96875 L 110.03125 130.90625 L 105.09375 132.09375 L 100 132.5 L 94.90625 132.09375 L 89.96875 130.90625 L 85.25 128.96875 L 80.90625 126.28125 L 77.03125 122.96875 L 73.71875 119.09375 L 71.03125 114.75 L 69.09375 110.03125 L 67.90625 105.09375 L 67.5 100 L 67.90625 94.90625 L 69.09375 89.96875 L 71.03125 85.25 L 73.71875 80.90625 L 77.03125 77.03125 L 80.90625 73.71875 L 85.25 71.03125 L 89.96875 69.09375 L 94.90625 67.90625 L 100 67.5 z M 84.5625 147.5625 L 92.1875 149.375 L 89.84375 164.1875 L 79.90625 161.8125 L 84.5625 147.5625 z" />
+    </g>
+</svg>
