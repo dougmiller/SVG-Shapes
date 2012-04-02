@@ -18,7 +18,7 @@
 		</clipPath>
 	</defs>
 
-	<rect width="400" height="24" x="0" y="0" style="stroke-width:2px;stroke:grey;"/>  <!-- Backing rect/frame -->
+	<rect width="400" height="24" x="0" y="0" style="stroke-width:2px;stroke:grey;"/>
 
 	<g clip-path="url(#loadclip)">
 		<rect x="-18" y ="2" width="516" height="20" style="stroke-width:0px;stroke:grey;" fill="url(#stripedback)">
