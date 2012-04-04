@@ -33,91 +33,35 @@
                 <animate id="largegearblue" attributeName="stroke" from="#E2E2E2" to="blue" begin="0; largegeargray.end+5s" dur="3s" repeatCount="1"/>
                 <animate id="largegeargray" attributeName="stroke" from="blue" to="#E2E2E2" begin="largegearblue.end" dur="3s" repeatCount="1"/>
  
-                <set id="bigGearDisp1" attributeName="display" to="none" begin="1s; bigGearDisp7.end + 1s" dur="0.9s"/>
+                <set id="bigGearDisp1" attributeName="display" to="none" begin="1s; bigGearDispFinal.end + 1s" dur="0.9s"/>
                 <set id="bigGearDisp2" attributeName="display" to="none" begin="bigGearDisp1.end + 0.6s" dur="0.2s"/>
                 <set id="bigGearDisp3" attributeName="display" to="none" begin="bigGearDisp2.end + 1.9s" dur="0.1s"/>
                 <set id="bigGearDisp4" attributeName="display" to="none" begin="bigGearDisp3.end + 1.1s" dur="0.5s"/>
                 <set id="bigGearDisp5" attributeName="display" to="none" begin="bigGearDisp4.end + 1.9s" dur="0.4s"/>
                 <set id="bigGearDisp6" attributeName="display" to="none" begin="bigGearDisp5.end + 0.8s" dur="1.0s"/>
-                <set id="bigGearDisp7" attributeName="display" to="none" begin="bigGearDisp6.end + 0.7s" dur="0.3s"/>
+                <set id="bigGearDisp7" attributeName="display" to="none" begin="bigGearDisp6.end + 0.7s" dur="0.4s"/>
+                <set id="bigGearDisp8" attributeName="display" to="none" begin="bigGearDisp7.end + 1.4s" dur="0.3s"/>
+                <set id="bigGearDisp9" attributeName="display" to="none" begin="bigGearDisp8.end + 1.2s" dur="0.9s"/>
+                <set id="bigGearDisp10" attributeName="display" to="none" begin="bigGearDisp9.end + 0.6s" dur="0.15s"/>
+                <set id="bigGearDisp11" attributeName="display" to="none" begin="bigGearDisp10.end + 1.9s" dur="0.3s"/>
+                <set id="bigGearDisp12" attributeName="display" to="none" begin="bigGearDisp11.end + 1.7s" dur="0.5s"/>
+                <set id="bigGearDisp13" attributeName="display" to="none" begin="bigGearDisp12.end + 1.3s" dur="0.4s"/>
+                <set id="bigGearDispFinal" attributeName="display" to="none" begin="bigGearDisp013.end + 1.0s" dur="1s"/>
             </use>
 
             <use id="smallgear" fill="none" stroke="#E2E2E2" stroke-width="2.5" transform="scale(0.25) translate(390, 360)" style="filter:url(#distanceBlurClose)" xlink:href="#tengearuse">
                 <animate id="smallgearorange" attributeName="stroke" from="#E2E2E2" to="orange" begin="2s; smallgeargray.end+7s" dur="4s" repeatCount="1"/>
                 <animate id="smallgeargray" attributeName="stroke" from="orange" to="#E2E2E2" begin="smallgearorange.end" dur="4s" repeatCount="1"/>
 
-		    	<animateTransform
-		    	    id="smallgearBroken1"
-        			attributeType="XML"
-        			attributeName="transform"
-        			type="rotate"
-        			from="0,100,100" to="60,100,100"
-        			begin="0;smallgearBroken9.end" dur="2s"
-					additive="sum"/>
-		    	<animateTransform
-		    	    id="smallgearBroken2"
-        			attributeType="XML"
-        			attributeName="transform"
-        			type="rotate"
-        			from="60,100,100" to="10,100,100"
-        			begin="smallgearBroken1.end" dur="1s"
-					additive="sum"/>
-		    	<animateTransform
-		    	    id="smallgearBroken3"
-        			attributeType="XML"
-        			attributeName="transform"
-        			type="rotate"
-        			from="10,100,100" to="200,100,100"
-        			begin="smallgearBroken2.end" dur="0.8s"
-					additive="sum"/>
-		    	<animateTransform
-		    	    id="smallgearBroken4"
-        			attributeType="XML"
-        			attributeName="transform"
-        			type="rotate"
-        			from="200,100,100" to="120,100,100"
-        			begin="smallgearBroken3.end" dur="1.1s"
-					additive="sum"/>
-		    	<animateTransform
-		    	    id="smallgearBroken5"
-        			attributeType="XML"
-        			attributeName="transform"
-        			type="rotate"
-        			from="120,100,100" to="300,100,100"
-        			begin="smallgearBroken4.end" dur="1s"
-					additive="sum"/>
-		    	<animateTransform
-		    	    id="smallgearBroken6"
-        			attributeType="XML"
-        			attributeName="transform"
-        			type="rotate"
-        			from="300,100,100" to="340,100,100"
-        			begin="smallgearBroken5.end" dur="0.8s"
-					additive="sum"/>
-		    	<animateTransform
-		    	    id="smallgearBroken7"
-        			attributeType="XML"
-        			attributeName="transform"
-        			type="rotate"
-        			from="340,100,100" to="270,100,100"
-        			begin="smallgearBroken6.end" dur="0.7s"
-					additive="sum"/>
-		    	<animateTransform
-		    	    id="smallgearBroken8"
-        			attributeType="XML"
-        			attributeName="transform"
-        			type="rotate"
-        			from="270,100,100" to="100,100,100"
-        			begin="smallgearBroken7.end" dur="1s"
-					additive="sum"/>
-		    	<animateTransform
-		    	    id="smallgearBroken9"
-        			attributeType="XML"
-        			attributeName="transform"
-        			type="rotate"
-        			from="100,100,100" to="0,100,100"
-        			begin="smallgearBroken8.end" dur="0.6s"
-					additive="sum"/>
+		    	<animateTransform id="smallgearBroken1" attributeType="XML" attributeName="transform" type="rotate" from="0,100,100" to="60,100,100" begin="0;smallgearBroken9.end" dur="2s" additive="sum"/>
+		    	<animateTransform id="smallgearBroken2" attributeType="XML" attributeName="transform" type="rotate" from="60,100,100" to="10,100,100" begin="smallgearBroken1.end" dur="1s" additive="sum"/>
+		    	<animateTransform id="smallgearBroken3" attributeType="XML" attributeName="transform" type="rotate" from="10,100,100" to="200,100,100" begin="smallgearBroken2.end" dur="0.8s" additive="sum"/>
+		    	<animateTransform id="smallgearBroken4" attributeType="XML" attributeName="transform" type="rotate" from="200,100,100" to="120,100,100" begin="smallgearBroken3.end" dur="1.1s" additive="sum"/>
+		    	<animateTransform id="smallgearBroken5" attributeType="XML" attributeName="transform" type="rotate" from="120,100,100" to="300,100,100" begin="smallgearBroken4.end" dur="1s" additive="sum"/>
+		    	<animateTransform id="smallgearBroken6" attributeType="XML" attributeName="transform" type="rotate" from="300,100,100" to="340,100,100" begin="smallgearBroken5.end" dur="0.8s" additive="sum"/>
+		    	<animateTransform id="smallgearBroken7" attributeType="XML" attributeName="transform" type="rotate" from="340,100,100" to="270,100,100" begin="smallgearBroken6.end" dur="0.7s" additive="sum"/>
+		    	<animateTransform id="smallgearBroken8" attributeType="XML" attributeName="transform" type="rotate" from="270,100,100" to="100,100,100" begin="smallgearBroken7.end" dur="1s" additive="sum"/>
+		    	<animateTransform id="smallgearBroken9" attributeType="XML" attributeName="transform" type="rotate" from="100,100,100" to="0,100,100" begin="smallgearBroken8.end" dur="0.6s" additive="sum"/>
             </use>
         </g>
 
