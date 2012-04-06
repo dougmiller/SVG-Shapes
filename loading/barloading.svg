@@ -11,10 +11,10 @@
             </g>
         </pattern>
 
-        <rect id="innercut" x="2" y ="1" width="396" height="22"/>
+        <rect id="innerframe" x="2" y ="1" width="396" height="22"/>
 
         <clipPath id="loadclip">
-            <use xlink:href="#innercut"/>
+            <use xlink:href="#innerframe"/>
         </clipPath>
     </defs>
 
