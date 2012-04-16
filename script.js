@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    var objectsList = [], isParsing = 0, insertArea = $('insertArea');
+    var objectsList = [], isParsing = 0, insertArea = $('#insertArea');
 
     function makeAJAXCall(hash, cb) {
         $.ajaxSetup({
