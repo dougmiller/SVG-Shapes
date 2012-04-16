@@ -40,7 +40,7 @@
             xmlDoc = $.parseXML(decodedEntry); // turn the string into an xml fragment
 
             importedNode = document.importNode(xmlDoc.documentElement, true);
-            $(insertArea).appendChild(importedNode);
+            insertArea.appendChild(importedNode);
         });
     }
 
