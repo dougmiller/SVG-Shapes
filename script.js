@@ -2,8 +2,6 @@
     'use strict';
 
     var objectsList = [], isParsing = 0, insertArea = $('insertArea');
-    var svger = '<?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="400" height="400"><style type="text/css">#powerGlyph:hover {filter: url(#distanceBlurClose);}</style><defs><path id="roundOff" d="M250,80 a150,150 1 1 1 -100,0"/><line id="straightOn" x1="202.5" y1="20" x2="202.5" y2="270"/><filter id="distanceBlurClose"><feGaussianBlur in="SourceGraphic" stdDeviation="1"/></filter></defs><g id="powerGlyph"><use xlink:href="#roundOff" stroke-width="15" stroke="gray" style="fill:none; stroke-linecap: round; filter:url(#distanceBlurClose);"/><use xlink:href="#straightOn" stroke-width="15" stroke="gray" style="fill:none; stroke-linecap: round; filter:url(#distanceBlurClose);"/></g></svg>';
-
 
     function makeAJAXCall(hash, cb) {
         $.ajaxSetup({
@@ -42,7 +40,7 @@
             xmlDoc = $.parseXML(decodedEntry); // turn the string into an xml fragment
 
             importedNode = document.importNode(xmlDoc.documentElement, true);
-            document.body.appendChild(importedNode);
+            $(insertArea).appendChild(importedNode);
         });
     }
 
