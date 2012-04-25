@@ -1,11 +1,10 @@
 (function () {
     'use strict';
 
-    var objectsList = [], isParsing = 0, insertArea = $('#insertArea');
+    var insertArea;
 
     function makeAJAXCall(hash, cb) {
-        $.ajaxSetup({
-            Accept: 'Application/vnd.github.raw+json',
+        $.ajaxSetup({  
             dataType: 'jsonp'
         });
 
@@ -23,19 +22,10 @@
         });
     }
 
-    function parseBlob(hash, cb) {
-        makeAJAXCall(hash, function (returnedJSON) {  // no loop as only one entry
-            if (cb) {
-                cb(returnedJSON.data.content);
-            }
-        });
-    }
-
     function addSVGToPage(SVGToAdd) {
         var entry, decodedEntry, xmlDoc, importedNode;
         makeAJAXCall(SVGToAdd, function (returnedJSON) {
-            var svgElement;
-            entry = decodeURIComponent(escape(atob(returnedJSON.data.content.replace(/\s/g, ''))));
+            entry = decodeURIComponent(escape(atob(returnedJSON.data.content.replace(/\s/g, ''))));  //docment is base64 encoded. We cant use "Accept: 'Application/vnd.github.raw+json'" as it is a jasonp request and we cant change it using that.
             decodedEntry = entry.split('\n').slice(2).join('\n');  //remove the first two elements in the file that prevent them from being added as an actual file.
             xmlDoc = $.parseXML(decodedEntry); // turn the string into an xml fragment
 
@@ -63,6 +53,7 @@
     }
 
     $(document).ready(function () {
+        insertArea = document.getElementById("insertArea");
         parseTree('master');
     });
 }());
